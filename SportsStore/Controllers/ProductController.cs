@@ -1,17 +1,19 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SportsStore.Models;
+using System.Linq;
 
 namespace SportsStore.Controllers
 {
     public class ProductController : Controller
     {
         private IProductRepository repository;
+        public int PageSize = 4;
 
-        public ProductController(IProductRepository repo)
+        public ProductController(IProductRepository repo) // при использовании интерфейса создается новый объект репозитории, он далее и используется 
         {
             repository = repo;
         }
 
-        public ViewResult List() => View(repository.Products);
+        public ViewResult List(int productPage = 1) => View(repository.Products.OrderBy(p => p.ProductID).Skip((productPage - 1) * PageSize).Take(PageSize));
     }
 }

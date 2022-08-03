@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -8,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using SportsStore.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace SportsStore
 {
@@ -22,9 +24,12 @@ namespace SportsStore
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration["Data:ConnectionString"]));
+            services.AddTransient<IProductRepository, EFProductRepository>(); //"Data:/SportsStoreProducts:ConnectionString"
+
             services.AddMvc();
-            services.AddControllersWithViews();
-            services.AddTransient<IProductRepository, FakeProductRepository>(); //метод AddTransient указывает что когда требуется реализация интерфейса IProductRepository должен создаваться новый объект FakeProductRepository>();
+            //services.AddControllersWithViews();
+            //services.AddTransient<IProductRepository, FakeProductRepository>(); //метод AddTransient указывает что когда требуется реализация интерфейса IProductRepository должен создаваться новый объект FakeProductRepository>();
             services.AddControllersWithViews(mvcOtions =>
             {
                 mvcOtions.EnableEndpointRouting = false;
@@ -55,6 +60,7 @@ namespace SportsStore
                     template: "{controller=Product}/{action=List}/{id?}"
                     );
             });
+            SeedData.EnsurePopulated(app);
 
             //app.UseEndpoints(endpoints =>
             //{

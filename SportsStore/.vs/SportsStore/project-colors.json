@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "a7436e77-61d7-4ea1-b248-5affaf0d8417": {
+      "ProjectGuid": "a7436e77-61d7-4ea1-b248-5affaf0d8417",
+      "DisplayName": "SportsStore",
+      "ColorIndex": 0
+    },
+    "e87aee38-0426-4085-ab3d-5ad740d6b150": {
+      "ProjectGuid": "e87aee38-0426-4085-ab3d-5ad740d6b150",
+      "DisplayName": "SportsStore.Tests",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Прочие файлы",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 2
+}

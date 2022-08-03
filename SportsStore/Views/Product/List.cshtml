@@ -1,8 +1,8 @@
 ﻿@model IEnumerable<Product>
 @foreach (var p in Model){
 	<div>
-		<h3>@p.Name</h3>
-		@p.Description
+		<h2>@p.Name</h2>
 		<h3>@p.Price.ToString("c")</h3>
+		@p.Description
 	</div>
 }
