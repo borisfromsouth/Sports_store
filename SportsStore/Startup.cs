@@ -25,8 +25,7 @@ namespace SportsStore
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration["Data:ConnectionString"]));
-            services.AddTransient<IProductRepository, EFProductRepository>(); //"Data:/SportsStoreProducts:ConnectionString"
-
+            services.AddTransient<IProductRepository, EFProductRepository>();
             services.AddMvc();
             //services.AddControllersWithViews();
             //services.AddTransient<IProductRepository, FakeProductRepository>(); //метод AddTransient указывает что когда требуется реализация интерфейса IProductRepository должен создаваться новый объект FakeProductRepository>();
@@ -38,36 +37,21 @@ namespace SportsStore
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            //if (env.IsDevelopment())
-            //{
-            //    app.UseDeveloperExceptionPage();
-            //}
-            //else
-            //{
-            //    app.UseExceptionHandler("/Home/Error");
-            //}
             app.UseStaticFiles();
-
-            //app.UseRouting();
-
-            //app.UseAuthorization();
-
             app.UseDeveloperExceptionPage();
             app.UseStatusCodePages();
             app.UseMvc(routes => {
+                routes.MapRoute(
+                    name: "pagination",
+                    template: "Products/Page{productPage}",
+                    defaults: new { Controller = "Product", action = "List"}
+                    );
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Product}/{action=List}/{id?}"
                     );
             });
             SeedData.EnsurePopulated(app);
-
-            //app.UseEndpoints(endpoints =>
-            //{
-            //    endpoints.MapControllerRoute(
-            //        name: "default",
-            //        pattern: "{controller=Home}/{action=Index}/{id?}");
-            //});
         }
     }
 }

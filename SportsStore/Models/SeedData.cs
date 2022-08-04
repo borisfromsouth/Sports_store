@@ -14,63 +14,63 @@ namespace SportsStore.Models
             if (!context.Products.Any())
             {
                 context.Products.AddRange(
-                    new Product
+                    new Product //1
                     {
                         Name = "Kayak",
                         Description = "12345",
                         Category = "Watersports",
                         Price = 275
                     },
-                    new Product
+                    new Product  //2
                     {
                         Name = "Lifejacket",
                         Description = "Protective and fashionable",
                         Category = "Watersports",
                         Price = 48.95m
                     },
-                    new Product
+                    new Product  //3
                     {
                         Name = "Soccer Ball",
                         Description = "12345",
                         Category = "Soccer",
                         Price = 19.50m
                     },
-                    new Product
+                    new Product  //4
                     {
                         Name = "Corner Flags",
                         Description = "12345",
                         Category = "Soccer",
                         Price = 34.95m
                     },
-                    new Product
+                    new Product  //5
                     {
                         Name = "Stadium",
                         Description = "12345",
                         Category = "Soccer",
                         Price = 79500
                     },
-                    new Product
+                    new Product  //6
                     {
                         Name = "Thinking Cap",
                         Description = "12345",
                         Category = "Chess",
                         Price = 16
                     },
-                    new Product
+                    new Product  //7
                     {
                         Name = "Unsteady Chair",
                         Description = "12345",
                         Category = "Chess",
                         Price = 29.95m
                     },
-                    new Product
+                    new Product  //8
                     {
                         Name = "Human Chess Board",
                         Description = "12345",
                         Category = "Chess",
                         Price = 75
                     },
-                    new Product
+                    new Product  //9
                     {
                         Name = "Bling-Bling King",
                         Description = "12345",
