@@ -140,3 +140,5 @@ D:\Asp_Projects\Sports_store\SportsStore\bin\Debug\net5.0\runtimes\win-x86\nativ
 D:\Asp_Projects\Sports_store\SportsStore\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 D:\Asp_Projects\Sports_store\SportsStore\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 D:\Asp_Projects\Sports_store\SportsStore\bin\Debug\net5.0\bower.json
+D:\Asp_Projects\Sports_store\SportsStore\obj\Debug\net5.0\SportsStore.csproj.AssemblyReference.cache
+D:\Asp_Projects\Sports_store\SportsStore\obj\Debug\net5.0\Razor\Views\Shared\ProductSummary.cshtml.g.cs
