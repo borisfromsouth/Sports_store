@@ -140,3 +140,5 @@ D:\Asp_Projects\Sports_store\SportsStore\bin\Debug\net5.0\runtimes\win\lib\netst
 D:\Asp_Projects\Sports_store\SportsStore\bin\Debug\net5.0\bower.json
 D:\Asp_Projects\Sports_store\SportsStore\obj\Debug\net5.0\Razor\Views\Shared\ProductSummary.cshtml.g.cs
 D:\Asp_Projects\Sports_store\SportsStore\obj\Debug\net5.0\Razor\Views\Shared\Components\NavigationMenu\Default.cshtml.g.cs
+D:\Asp_Projects\Sports_store\SportsStore\obj\Debug\net5.0\SportsStore.csproj.AssemblyReference.cache
+D:\Asp_Projects\Sports_store\SportsStore\obj\Debug\net5.0\Razor\Views\Cart\Index.cshtml.g.cs

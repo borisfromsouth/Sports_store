@@ -27,6 +27,8 @@ namespace SportsStore
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration["Data:ConnectionString"]));
             services.AddTransient<IProductRepository, EFProductRepository>();
             services.AddMvc();
+            services.AddMemoryCache();
+            services.AddSession();
             //services.AddControllersWithViews();
             //services.AddTransient<IProductRepository, FakeProductRepository>(); //метод AddTransient указывает что когда требуется реализация интерфейса IProductRepository должен создаваться новый объект FakeProductRepository>();
             services.AddControllersWithViews(mvcOtions =>
@@ -40,6 +42,7 @@ namespace SportsStore
             app.UseStaticFiles();
             app.UseDeveloperExceptionPage();
             app.UseStatusCodePages();
+            app.UseSession();
             app.UseMvc(routes => {
                 routes.MapRoute(
                     name: null,
