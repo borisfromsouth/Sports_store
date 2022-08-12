@@ -5,6 +5,7 @@
   "devDependencies": {
   },
   "dependencies": {
-    "bootstrap": "4.0.0"
+    "bootstrap": "4.0.0",
+    "fontawesome": "4.7.0"
   }
 }

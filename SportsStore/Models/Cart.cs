@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 
 namespace SportsStore.Models
@@ -31,6 +32,7 @@ namespace SportsStore.Models
         public class CartLine
         {
             private int CartLineID { get; set; }
+
             public Product Product { get; set; }
             public int Quantity { get; set; }
         }

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "MGarV1WiHKMaQV9C2RiyE7csZ5Mwb+0WbnOdKxdy5E2LMKGU2Bf7jVB8SDKqulO22dHkLYH7UBeRY1756rmVVA==",
+  "dgSpecHash": "jUDfHa8wopCz+ShEwLoTH4Vtc/eWqJa/NMT1maVFWOHpnhZGppDOX4Le4+pNp+qztATaBa8gdEShhXUSy42OIQ==",
   "success": true,
   "projectFilePath": "D:\\Asp_Projects\\Sports_store\\SportsStore\\SportsStore.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\fontawesome\\4.7.0\\fontawesome.4.7.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
